@@ -1,5 +1,6 @@
 #ChauhanMahesh/Vasusen/COL/DroneBots
 
+import asyncio
 from .. import bot, AUTH
 from telethon import events
 
