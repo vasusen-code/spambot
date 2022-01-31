@@ -6,7 +6,7 @@ variable:
 - `API_ID`
 - `API_HASH`
 - `BOT_TOKEN`
-- `AUTH` - If you want multiple auth then just all ids using "," but don't add space. eg: 123456789,690042069,420420420
+- `AUTH` - If you want multiple auth then just add all ids using "," but don't add space. eg: 123456789,690042069,420420420
 
 Format:
 
