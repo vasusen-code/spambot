@@ -30,6 +30,7 @@ async def u(event):
                 chat = int((event.text).split(" ")[3]) 
         except ValueError:
             await event.reply("Sleep_time and spam_range should be integers.")
+            return
         try:
             for i in range(total):
                 if sleep == 0:
