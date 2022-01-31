@@ -7,11 +7,11 @@ from telethon import events
 @bot.on(events.NewMessage(incoming=True))
 async def u(event):
     au = AUTH.split(",")
-    if event.is_private and not f'{event.sender_id}' in au:
+    if event.is_private and f'{event.sender_id}' not in au:
         await event.reply("You're not authorized to use me!")
         return
     if (str(event.text)).lower().startswith("spam:"): 
-        if not f'{event.sender_id}' in au:
+        if f'{event.sender_id}' not in au:
             await event.reply("You're not authorized to use me!")
             return
         reply = await event.get_reply_message()
