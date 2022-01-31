@@ -11,6 +11,9 @@ async def u(event):
         await event.reply("You're not authorized to use me!")
         return
     if (str(event.text)).lower().startswith("spam:"): 
+        if event.is_private and not f'{event.sender_id}' in au:
+            await event.reply("You're not authorized to use me!")
+            return
         reply = await event.get_reply_message()
         if not reply:
             await event.reply("Reply to any message.")
