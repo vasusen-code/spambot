@@ -4,7 +4,7 @@ import asyncio
 from .. import bot, AUTH
 from telethon import events
 
-@Drone.on(events.NewMessage(incoming=True))
+@bot.on(events.NewMessage(incoming=True))
 async def u(event):
     au = AUTH.split(",")
     if event.is_private and not f'{event.sender_id}' in au:
