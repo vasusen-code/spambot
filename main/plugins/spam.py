@@ -45,11 +45,6 @@ async def u(event):
                         await asyncio.sleep(sleep)
                 except FloodWaitError as fw:
                     await asyncio.sleep(fw.seconds + 5)
-                    if sleep == 0:
-                        await event.client.send_message(chat, reply) 
-                    else:
-                        await event.client.send_message(chat, reply) 
-                        await asyncio.sleep(sleep)
         except Exception as e:
             await event.client.send_message(event.chat_id, f"**SPAM FAILED**\n\nError: {str(e)}")
                 
